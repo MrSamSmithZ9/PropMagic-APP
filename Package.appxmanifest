@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity
+    Name="TechfireIndustriesX.PropMagic"
+    Publisher="CN=6D7F0974-1E2C-4960-9D92-2AA377A5D2C1"
+    Version="2.0.26.0" />
+
+  <mp:PhoneIdentity PhoneProductId="bbf6bb89-d87b-4edc-b92f-f0418eb5e4dc" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>PropMagic</DisplayName>
+    <PublisherDisplayName>Techfire Industries X</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="PropMagic.App">
+      <uap:VisualElements
+        DisplayName="PropMagic"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="PropMagic"
+        BackgroundColor="transparent" Square150x150Logo="Assets\Square150x150Logo.png">
+        <uap:DefaultTile  Square310x310Logo="Assets\LargeTile.png" Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png"/>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
+        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badge"/>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <DeviceCapability Name="bluetooth"/>
+  </Capabilities>
+</Package>
